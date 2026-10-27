@@ -1,0 +1,40 @@
+### 1. GET all students
+GET http://localhost:8080/students
+
+### 2. GET student by ID
+GET http://localhost:8080/students/101
+
+### 3. POST add a student
+POST http://localhost:8080/students
+Content-Type: application/json
+
+{
+  "studentId": 106,
+  "name": "Amit Kumar",
+  "email": "amit@kiet.edu",
+  "branch": "CSE",
+  "year": 2,
+  "cgpa": 8.75
+}
+
+### 4. PUT update a student
+PUT http://localhost:8080/students/101
+Content-Type: application/json
+
+{
+  "studentId": 101,
+  "name": "Rahul Sharma",
+  "email": "rahul@kiet.edu",
+  "branch": "CSE",
+  "year": 3,
+  "cgpa": 9.05
+}
+
+### 5. DELETE a student
+DELETE http://localhost:8080/students/105
+
+### 6. Search by branch and year
+GET http://localhost:8080/students/search?branch=CSE&year=2
+
+### 7. Find students with CGPA >= 9.0
+GET http://localhost:8080/students/topper?cgpa=9.0
